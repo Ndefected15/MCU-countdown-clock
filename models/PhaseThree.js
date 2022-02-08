@@ -24,7 +24,15 @@ PhaseThree.init({
         type: DataTypes.STRING,
         allowNull: false,
     },
-    filename: {
+    poster_horizontal: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    background: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    logo: {
         type: DataTypes.STRING,
         allowNull: false,
     },

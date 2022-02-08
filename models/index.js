@@ -3,6 +3,7 @@ const TvShow = require('./TvShow');
 const PhaseOne = require('./PhaseOne');
 const PhaseTwo = require('./PhaseTwo');
 const PhaseThree = require('./PhaseThree');
+const PhaseFour = require('./PhaseFour');
 
 Movies.hasMany(TvShow, {
     foreignKey: 'gallery_id',
@@ -24,4 +25,8 @@ PhaseThree.belongsTo(Movies, {
     foreignKey: 'gallery_id',
 });
 
-module.exports = { Movies, TvShow, PhaseOne, PhaseTwo, PhaseThree };
+PhaseFour.belongsTo(Movies, {
+    foreignKey: 'gallery_id',
+});
+
+module.exports = { Movies, TvShow, PhaseOne, PhaseTwo, PhaseThree, PhaseFour };

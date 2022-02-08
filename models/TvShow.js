@@ -29,6 +29,18 @@ TvShow.init({
         type: DataTypes.STRING,
         allowNull: false,
     },
+    poster_horizontal: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    background: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    logo: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
 }, {
     sequelize,
     freezeTableName: true,

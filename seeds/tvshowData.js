@@ -7,6 +7,9 @@ const tvshowData = [{
         release_date: new Date(2021, 0, 15),
         directed_by: 'Matt Shakman',
         phase: 4,
+        poster_horizontal: 'PostersH/WandaVision.jfif',
+        background: 'Background/WandaVision.jfif',
+        logo: 'Logo/WandaVision.png'
     },
     {
         id: 2,
@@ -15,6 +18,9 @@ const tvshowData = [{
         release_date: new Date(2021, 2, 19),
         directed_by: 'Kari Skogland',
         phase: 4,
+        poster_horizontal: 'PostersH/The_Falcon_and_The_Winter_Soldier.jfif',
+        background: 'Background/The_Falcon_and_The_Winter_Soldier.jfif',
+        logo: 'Logo/The_Falcon_and_The_Winter_Soldier.png'
     },
     {
         id: 3,
@@ -23,6 +29,9 @@ const tvshowData = [{
         release_date: new Date(2021, 5, 9),
         directed_by: 'Kate Herron',
         phase: 4,
+        poster_horizontal: 'PostersH/Loki.jfif',
+        background: 'Background/Loki.jfif',
+        logo: 'Logo/Loki.png'
     },
     {
         id: 4,
@@ -31,6 +40,9 @@ const tvshowData = [{
         release_date: new Date(2021, 7, 11),
         directed_by: 'Bryan Andrew',
         phase: 4,
+        poster_horizontal: 'PostersH/What_If.jfif',
+        background: 'Background/What_If.jfif',
+        logo: 'Logo/What_If.png'
     },
     {
         id: 5,
@@ -39,14 +51,9 @@ const tvshowData = [{
         release_date: new Date(2021, 10, 24),
         directed_by: 'Rhys Thomas, Bert and Bertie',
         phase: 4,
-    },
-    {
-        id: 6,
-        title: 'Moon Knight',
-        overview: "Moon Knight follows Steven Grant, a mild-mannered gift-shop employee, who becomes plagued with blackouts and memories of another life. Steven discovers he has dissociative identity disorder and shares a body with mercenary Marc Spector. As Steven/Marc's enemies converge upon them, they must navigate their complex identities while thrust into a deadly mystery among the powerful gods of Egypt.",
-        release_date: new Date(2022, 2, 30),
-        directed_by: 'Mohamed Diab',
-        phase: 4,
+        poster_horizontal: 'PostersH/Hawkeye.jfif',
+        background: 'Background/Hawkeye.jfif',
+        logo: 'Logo/Hawkeye.png'
     },
 ];
 
