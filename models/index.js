@@ -1,3 +1,9 @@
+// Content Model
+const Films = require('./Films');
+const TvShow = require('./TvShow');
+const Phase = require('./Phase');
+
+// User Model
 const User = require('./User');
 const Post = require('./Post');
 const Vote = require('./Vote');
@@ -56,4 +62,16 @@ Post.hasMany(Comment, {
 	foreignKey: 'post_id',
 });
 
-module.exports = { User, Post, Vote, Comment };
+// Content
+Films.belongsTo(Phase, {
+	foreignKey: 'phase_id',
+});
+
+TvShow.belongsTo(Phase, {
+	foreignKey: 'phase_id',
+});
+
+Phase.hasMany(Films, {
+	foreignKey: 'phase_id',
+});
+module.exports = { Films, Phase, TvShow, User, Post, Vote, Comment };
