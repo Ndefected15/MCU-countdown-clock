@@ -4,15 +4,15 @@ const seedFilms = require('./films');
 const seedPhase = require('./phase');
 
 const seedAll = async () => {
-	await sequelize.sync({ force: true });
+  await sequelize.sync({ force: true });
 
-	await seedTVShows();
+  await seedTVShows();
 
-	await seedFilms();
+  await seedFilms();
 
-	await seedPhase();
+  await seedPhase();
 
-	process.exit(0);
+  process.exit(0);
 };
 
 seedAll();

@@ -1,0 +1,254 @@
+-- INSERT INTO films (id, title, overview, release_date, directed_by, poster_horizontal, background, logo)
+-- VALUES 
+--     (   
+--         1,
+-- 		'Iron Man',
+		
+-- 			"2008's Iron Man tells the story of Tony Stark, a billionaire industrialist and genius inventor who is kidnapped and forced to build a devastating weapon. Instead, using his intelligence and ingenuity, Tony builds a high-tech suit of armor and escapes captivity. When he uncovers a nefarious plot with global implications, he dons his powerful armor and vows to protect the world as Iron Man.",
+-- 		"2008, 4, 2",
+-- 		'Jon Favreau',
+-- 		'PostersH/Iron_Man.jfif',
+-- 		'Background/Iron_Man_1.jfif',
+-- 		'Logo/Iron_Man.png'
+--         ), (
+--          2,
+-- 		 'Iron Man 2',
+	
+-- 			'With the world now aware that he is Iron Man, billionaire inventor Tony Stark faces pressure from all sides to share his technology with the military. He is reluctant to divulge the secrets of his armored suit, fearing the information will fall into the wrong hands. With Pepper Potts and "Rhodey" Rhodes by his side, Tony must forge new alliances and confront a powerful new enemy.',
+-- 		(2010, 4, 7),
+-- 	'Jon Favreau',
+-- 		'PostersH/Iron_Man_2.jfif',
+-- 		'Background/Iron_Man_2.jfif',
+-- 		'Logo/Iron_Man_2.png',
+--         ),
+-- 	(
+-- 		 3,
+-- 		 'Thor',
+	
+-- 			"As the son of Odin, king of the Norse gods, Thor will soon inherit the throne of Asgard from his aging father. However, on the day that he is to be crowned, Thor reacts with brutality when the gods' enemies, the Frost Giants, enter the palace in violation of their treaty. As punishment, Odin banishes Thor to Earth. While Loki, Thor's brother, plots mischief in Asgard, Thor, now stripped of his powers, faces his greatest threat.",
+-- 		(2011, 4, 6),
+-- 	'Kenneth Branagh',
+-- 		'PostersH/Thor.jfif',
+-- 		'Background/Thor.jfif',
+-- 		'Logo/Thor.png',
+-- 	),
+-- 	(
+-- 		 4,
+-- 		 'Captain America: The First Avenger',
+	
+-- 			"Marvel's 'Captain America: The First Avenger' focuses on the early days of the Marvel Universe when Steve Rogers volunteers to participate in an experimental program that turns him into the Super Soldier known as Captain America.",
+-- 		(2011, 6, 22),
+-- 	'Joe Johnston',
+-- 		'PostersH/Captain_America.jfif',
+-- 		'Background/Captain_America.jfif',
+-- 		'Logo/Captain_America_First_Avenger.png',
+-- 	),
+-- 	(
+-- 		 5,
+-- 		 'The Avengers',
+	
+-- 			'Marvel Studios presents in association with Paramount Pictures "Marvel\'s The Avengers"--the super hero team up of a lifetime, featuring iconic Marvel super heroes Iron Man, the Incredible Hulk, Thor, Captain America, Hawkeye and Black Widow. When an unexpected enemy emerges that threatens global safety and security, Nick Fury, Director of the international peacekeeping agency known as S.H.I.E.L.D., finds himself in need of a team to pull the world back from the brink of disaster. Spanning the globe, a daring recruitment effort begins.',
+-- 		(2012, 4, 4),
+-- 	'Joss Whedon',
+-- 		'PostersH/Avengers.jfif',
+-- 		'Background/Avengers.jfif',
+-- 		'Logo/Avengers.png',
+-- 	),
+-- 	(
+-- 		 6,
+-- 		 'Iron Man 3',
+	
+-- 			'Marvel\'s "Iron Man 3" pits brash-but-brilliant industrialist Tony Stark/Iron Man against an enemy whose reach knows no bounds. When Stark finds his personal world destroyed at his enemy\'s hands, he embarks on a harrowing quest to find those responsible. This journey, at every turn, will test his mettle. With his back against the wall, Stark is left to survive by his own devices, relying on his ingenuity and instincts to protect those closest to him. As he fights his way back, Stark discovers the answer to the question that has secretly haunted him: does the man make the suit or does the suit make the man',
+-- 		(2013, 4, 3),
+-- 	'Shane Black',
+-- 		'PostersH/Iron_Man_3.jfif',
+-- 		'Background/Iron_Man_3.jfif',
+-- 		'Logo/Iron_Man_3.png',
+-- 	),
+-- 	(
+-- 		 7,
+-- 		 'Thor: The Dark World',
+	
+-- 			'In the aftermath of Marvel\'s "Thor" and "Marvel\'s The Avengers," Thor fights to restore order across the cosmos...but an ancient race led by the vengeful Malekith returns to plunge the universe back into darkness. Faced with an enemy that even Odin and Asgard cannot withstand, Thor must embark on his most perilous and personal journey yet, one that will reunite him with Jane Foster and force him to sacrifice everything to save us all.',
+-- 		(2013, 10, 8),
+-- 	'Alan Taylor',
+-- 		'PostersH/Thor_The_Dark_World.jfif',
+-- 		'Background/Thor_The_Dark_World.jfif',
+-- 		'Logo/Thor_The_Dark_World.png',
+-- 	),
+-- 	(
+-- 		 8,
+-- 		 'Captain America: The Winter Soldier',
+	
+-- 			'After the cataclysmic events in New York with The Avengers, Marvel\'s "Captain America: The Winter Soldier," finds Steve Rogers, aka Captain America, living quietly in Washington, D.C. and trying to adjust to the modern world. But when a S.H.I.E.L.D. colleague comes under attack, Steve becomes embroiled in a web of intrigue that threatens to put the world at risk. Joining forces with the Black Widow, Captain America struggles to expose the ever-widening conspiracy while fighting off professional assassins sent to silence him at every turn. When the full scope of the villainous plot is revealed, Captain America and the Black Widow enlist the help of a new ally, the Falcon. However, they soon find themselves up against an unexpected and formidable enemy--the Winter Soldier.',
+-- 		(2014, 3, 4),
+-- 	'Anthony Russo, Joe Russo',
+-- 		'PostersH/Captain_America_The_Winter_Soldier.jfif',
+-- 		'Background/Captain_America_The_Winter_Soldier.jfif',
+-- 		'Logo/Captain_America_The_Winter_Soldier.png',
+-- 	),
+-- 	(
+-- 		 9,
+-- 		 'Guardians of the Galaxy',
+	
+-- 			'An action-packed, epic space adventure, Marvel\'s "Guardians of the Galaxy," expands the Marvel Cinematic Universe into the cosmos, where brash adventurer Peter Quill finds himself the object of an unrelenting bounty hunt after stealing a mysterious orb coveted by Ronan, a powerful villain with ambitions that threaten the entire universe. To evade the ever-persistent Ronan, Quill is forced into an uneasy truce with a quartet of disparate misfits--Rocket, a gun-toting raccoon; Groot, a tree-like humanoid; the deadly and enigmatic Gamora; and the revenge-driven Drax the Destroyer. But when Quill discovers the true power of the orb and the menace it poses to the cosmos, he must do his best to rally his ragtag rivals for a last, desperate stand--with the galaxy\'s fate in the balance.',
+-- 		(2014, 7, 1),
+-- 	'James Gunn',
+-- 		'PostersH/GOTG.jfif',
+-- 		'Background/GOTG.jfif',
+-- 		'Logo/GOTG.png',
+-- 	),
+-- 	(
+-- 		 10,
+-- 		 'Avengers: Age of Ultron',
+	
+-- 			"Marvel Studios presents 'Avengers: Age of Ultron', the epic follow-up to the biggest Super Hero movie of all time. When Tony Stark tries to jumpstart a dormant peacekeeping program, things go awry and Earth's Mightiest Heroes, including Iron Man, Captain America, Thor, The Incredible Hulk, Black Widow and Hawkeye, are put to the ultimate test as the fate of the planet hangs in the balance. As the villainous Ultron emerges, it is up to the Avengers to stop him from enacting his terrible plans, and soon uneasy alliances and unexpected action pave the way for an epic and unique global adventure.",
+-- 		(2015, 4, 1),
+-- 	'Joss Whedon',
+-- 		'PostersH/Avengers_2.jfif',
+-- 		'Background/Avengers_AoU.jfif',
+-- 		'Logo/Avengers_AoU.png',
+-- 	),
+-- 	(
+-- 		 11,
+-- 		 'Ant-Man',
+	
+-- 			'The next evolution of the Marvel Cinematic Universe brings a founding member of The Avengers to the big screen for the first time with Marvel Studios\' "Ant-Man." Armed with the astonishing ability to shrink in scale but increase in strength, master thief Scott Lang must embrace his inner-hero and help his mentor, Doctor Hank Pym, protect the secret behind his spectacular Ant-Man suit from a new generation of towering threats. Against seemingly insurmountable obstacles, Pym and Lang must plan and pull off a heist that will save the world.',
+-- 		(2015, 6, 17),
+-- 	'Peyton Reed',
+-- 		'PostersH/Ant-Man.jfif',
+-- 		'Background/Ant-Man.jfif',
+-- 		'Logo/Ant-Man.png',
+-- 	),
+-- 	(
+-- 		 12,
+-- 		 'Captain America: Civil War',
+	
+-- 			"Marvel's 'Captain America: Civil War' finds Steve Rogers leading the newly formed team of Avengers in their continued efforts to safeguard humanity. But after another incident involving the Avengers results in collateral damage, political pressure mounts to install a system of accountability, headed by a governing body to oversee and direct the team. The new status quo fractures the Avengers, resulting in two campsÔÇöone led by Steve Rogers and his desire for the Avengers to remain free to defend humanity without government interference, and the other following Tony Stark's surprising decision to support government oversight and accountability.",
+-- 		(2016, 4, 6),
+-- 	'Anthony Russo, Joe Russo',
+-- 		'PostersH/Captain_America_Civil_War.jfif',
+-- 		'Background/Captain_America_Civil_War.jfif',
+-- 		'Logo/Captain_America_Civil_War.png',
+-- 	),
+-- 	(
+-- 		 13,
+-- 		 'Doctor Strange',
+	
+-- 			'From Marvel Studios comes "Doctor Strange", the story of world-famous neurosurgeon Dr. Stephen Strange whose life changes forever after a horrific car accident robs him of the use of his hands. When traditional medicine fails him, he is forced to look for healing, and hope, in an unlikely place - mysterious enclave known as Kamar-Taj. He quickly learns that this is not just a center for healing but also the front line of a battle against unseen dark forces bent on destroying our reality. Before long StrangeÔÇöarmed with newly acquired magical powers - is forced to choose whether to return to his life of fortune and status or leave it all behind to defend the world as the most powerful sorcerer in existence.',
+-- 		(2016, 10, 4),
+-- 	'Scott Derrickson',
+-- 		'PostersH/Doctor_Strange.jfif',
+-- 		'Background/Doctor_Strange.jfif',
+-- 		'Logo/Doctor_Strange.png',
+-- 	),
+-- 	(
+-- 		 14,
+-- 		 'Guardians of the Galaxy Vol. 2',
+	
+-- 			"Set to the backdrop of 'Awesome Mixtape #2,' Marvel's Guardians of the Galaxy Vol. 2 continues the team's adventures as they traverse the outer reaches of the cosmos. The Guardians must fight to keep their newfound family together as they unravel the mysteries of Peter Quill's true parentage. Old foes become new allies and fan-favorite characters from the classic comics will come to our heroes' aid as the Marvel cinematic universe continues to expand.",
+-- 		(2017, 4, 5),
+-- 	'James Gunn',
+-- 		'PostersH/GOTG_2.jfif',
+-- 		'Background/GOTG_2.jfif',
+-- 		'Logo/GOTG_2.png',
+-- 	),
+-- 	(
+-- 		 15,
+-- 		 'Thor: Ragnarok',
+	
+-- 			'Thor is imprisoned on the other side of the universe without his mighty hammer and finds himself in a race against time to get back to Asgard to stop Ragnarok - the destruction of his homeworld and the end of Asgardian civilization - at the hands of an all-powerful new threat, the ruthless Hela. But first he must survive a deadly gladiatorial contest that pits him against his former ally and fellow Avenger - the Incredible Hulk!',
+-- 		(2018, 1, 16),
+-- 	'Taika Waititi',
+-- 		'PostersH/Thor_Ragnarok.jfif',
+-- 		'Background/Thor_Ragnarok.jfif',
+-- 		'Logo/Thor_Ragnarok.png',
+-- 	),
+-- 	(
+-- 		 16,
+-- 		 'Black Panther',
+	
+-- 			"Marvel Studios' \"Black Panther\" follows T'Challa who, after the death of his father, the King of Wakanda, returns home to the isolated, technologically advanced African nation to succeed to the throne and take his rightful place as king. But when a powerful old enemy reappears, T'Challa's mettle as king - and Black Panther - is tested when he is drawn into a formidable conflict that puts the fate of Wakanda and the entire world at risk. Faced with treachery and danger, the young king must rally his allies and release the full power of Black Panther to defeat his foes and secure the safety of his people and their way of life.",
+-- 		(2015, 4, 1),
+-- 	'Ryan Coogler',
+-- 		'PostersH/Black_Panther.jfif',
+-- 		'Background/Black_Panther.jfif',
+-- 		'Logo/Black_Panther.png',
+-- 	),
+-- 	(
+-- 		 17,
+-- 		 'Avengers: Infinity War',
+	
+-- 			'An unprecedented cinematic journey ten years in the making and spanning the entire Marvel Cinematic Universe, Marvel Studios\' "Avengers: Infinity War" brings to the screen the ultimate, deadliest showdown of all time. As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment - the fate of Earth and existence itself has never been more uncertain.',
+-- 		(2018, 3, 27),
+-- 	'Anthony Russo, Joe Russo',
+-- 		'PostersH/Avengers_Infinity_War.jfif',
+-- 		'Background/Avengers_Infinity_War.jfif',
+-- 		'Logo/Avengers_Infinity_War.png',
+-- 	),
+-- 	(
+-- 		 18,
+-- 		 'Ant-Man and The Wasp',
+	
+-- 			'From the Marvel Cinematic Universe comes a new chapter featuring heroes with the astonishing ability to shrink: "Ant-Man and The Wasp.". In the aftermath of "Captain America: Civil War", Scott Lang (Paul Rudd) grapples with the consequences of his choices as both a Super Hero and a father. As he struggles to rebalance his home life with his responsibilities as Ant-Man, he\'s confronted by Hope van Dyne (Evangeline Lilly) and Dr. Hank Pym (Michael Douglas) with an urgent new mission. Scott must once again put on the suit and learn to fight alongside The Wasp as the team works together to uncover secrets from their past.',
+-- 		(2018, 6, 6),
+-- 	'Peyton Reed',
+-- 		'PostersH/Ant-Man_and_The_Wasp.jfif',
+-- 		'Background/Ant-Man_and_The_Wasp.jfif',
+-- 		'Logo/Ant-Man_and_The_Wasp.png',
+-- 	),
+-- 	(
+-- 		 19,
+-- 		 'Captain Marvel',
+	
+-- 			'Set in the 1990s, Marvel Studios\' "Captain Marvel" is an all-new adventure from a previously unseen period in the history of the Marvel Cinematic Universe that follows the journey of Carol Danvers as she becomes one of the universe\'s most powerful heroes. While a galactic war between two alien races reaches Earth, Danvers finds herself and a small cadre of allies at the center of the maelstrom.',
+-- 		(2019, 2, 8),
+-- 	'Anna Boden, Ryan Fleck',
+-- 		'PostersH/Captain_Marvel.jfif',
+-- 		'Background/Captain_Marvel.jfif',
+-- 		'Logo/Captain_Marvel.png',
+-- 	),
+-- 	(
+-- 		 20,
+-- 		 'Avengers: Endgame',
+	
+-- 			'The grave course of events set in motion by Thanos that wiped out half the universe and fractured the Avengers ranks compels the remaining Avengers to take one final stand in Marvel Studios\' grand conclusion to twenty-two films, "Avengers: Endgame."',
+-- 		(2019, 3, 26),
+-- 	'Anthony Russo, Joe Russo',
+-- 		'PostersH/Avengers_Endgame.jfif',
+-- 		'Background/Avengers_Endgame.jfif',
+-- 		'Logo/Avenger_Endgame',
+-- 	),
+-- 	(
+-- 		 21,
+-- 		 'Black Widow',
+	
+-- 			"In Marvel Studios' action-packed spy thriller “Black Widow”, Natasha Romanoff aka Black Widow confronts the darker parts of her ledger when a dangerous conspiracy with ties to her past arises. Pursued by a force that will stop at nothing to bring her down, Natasha must deal with her history as a spy and the broken relationships left in her wake long before she became an Avenger.",
+-- 		(2021, 6, 9),
+-- 	'Cate Shortland',
+-- 		'PostersH/Black_Widow.jfif',
+-- 		'Background/Black_Widow.jfif',
+-- 		'Logo/Black_Widow.png',
+-- 	),
+-- 	(
+-- 		 22,
+-- 		 'Shang-Chi and The Legend of The Ten Rings',
+	
+-- 			"Marvel Studios' \"Shang-Chi and The Legend of The Ten Rings\" stars Simu Liu as Shang-Chi, who must confront the past he thought he left behind when he is drawn into the web of the mysterious Ten Rings organization. The film also stars Tony Leung as Wenwu, Awkwafina as Shang-Chi's friend Katy and Michelle Yeoh as Jiang Nan, as well as Fala Chen, Meng'er Zhang, Florian Munteanu and Ronny Chieng.",
+-- 		(2021, 8, 3),
+-- 	'Destin Daniel Cretton',
+-- 		'PostersH/Shang-Chi.jfif',
+-- 		'Background/Shang_Chi.jfif',
+-- 		'Logo/Shang_Chi.png',
+-- 	),
+-- 	(
+-- 		 23,
+-- 		 'Eternals',
+	
+-- 			"Marvel Studios' Eternals features an exciting new team of Super Heroes in the Marvel Cinematic Universe, ancient aliens who have been living on Earth in secret for thousands of years. Following the events of Avengers: Endgame, an unexpected tragedy forces them out of the shadows to reunite against mankind's most ancient enemy, The Deviants.",
+-- 		(2021, 10, 5),
+-- 	'Chloé Zhao',
+-- 		'PostersH/Eternals.jfif',
+-- 		'Background/Eternals.jfif',
+-- 		'Logo/Eternals.png',
+-- 	);
