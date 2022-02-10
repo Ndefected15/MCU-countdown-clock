@@ -9,6 +9,7 @@
     color: white;
     font-size: 50px;
     letter-spacing: 2px;
+    z-index: 0;
   }
 
 .footer span {

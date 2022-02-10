@@ -16,7 +16,6 @@ function closeNav() {
 }
 
 
-<<<<<<< HEAD
 const switchers = [...document.querySelectorAll('.switcher')]
 
 switchers.forEach(item => {
@@ -26,8 +25,6 @@ switchers.forEach(item => {
     })
 })
 
-=======
->>>>>>> feature/countdown
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -56,15 +53,3 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
 }
-<<<<<<< HEAD
-=======
-
-const switchers = [...document.querySelectorAll('.switcher')]
-
-switchers.forEach(item => {
-    item.addEventListener('click', function() {
-        switchers.forEach(item => item.parentElement.classList.remove('is-active'))
-        this.parentElement.classList.add('is-active')
-    })
-})
->>>>>>> feature/countdown
