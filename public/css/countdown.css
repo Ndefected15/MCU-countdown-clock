@@ -1,0 +1,17 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    padding: 30px;
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    font-family: bangers;
+    color: white;
+    font-size: 50px;
+    letter-spacing: 2px;
+  }
+
+.footer span {
+    color: red;
+    font-size: 55px;
+}

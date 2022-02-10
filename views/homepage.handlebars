@@ -14,7 +14,7 @@
 						<div class='movie-list'>
 
                              {{#each films as |film|}}
-                             <div class='movie-list-item'>
+                             <div class='movie-list-item' id='{{film.id}}'>
 								<img
 									class='movie-list-item-img'
 									src="/images/{{film.poster_horizontal}}"
@@ -40,7 +40,7 @@
 						<div class='movie-list'>
 
                              {{#each films as |film|}}
-                             <div class='movie-list-item'>
+                             <div class='movie-list-item' id='{{film.id}}'>
 								<img
 									class='movie-list-item-img'
 									src="/images/{{film.poster_horizontal}}"
@@ -76,7 +76,7 @@
 						<div class='movie-list'>
 
                              {{#each films as |film|}}
-                             <div class='movie-list-item'>
+                             <div class='movie-list-item' id='{{film.id}}'>
 								<img
 									class='movie-list-item-img'
 									src="/images/{{film.poster_horizontal}}"
@@ -101,7 +101,7 @@
 						<div class='movie-list'>
 
                              {{#each films as |film|}}
-                             <div class='movie-list-item'>
+                             <div class='movie-list-item' id='{{film.id}}'>
 								<img
 									class='movie-list-item-img'
 									src="/images/{{film.poster_horizontal}}"
@@ -124,6 +124,6 @@
 
 		<!-- CHAT BAR BLOCK -->
 		{{>chatbox}}
-
+		{{>countdown}}
 	
 	</body>
