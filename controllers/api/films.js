@@ -58,7 +58,7 @@ router.get('/:id', (req, res) => {
 		],
 	})
 		.then((dbFilmData) => {
-			const posts = dbFilmData.map((post) => post.get({ plain: true }));
+			const films = dbFilmData.map((post) => post.get({ plain: true }));
 
 			res.render('homepage', {
 				films,

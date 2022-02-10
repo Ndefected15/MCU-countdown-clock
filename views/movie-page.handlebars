@@ -22,41 +22,7 @@
 	</head>
 
 	<body>
-		<nav class='navbar'>
-			<img
-				src='./assets/images/Logo/Marvel_Cinematic_Universe_Logo-.png'
-				class='brand-logo'
-				alt=''
-			/>
-		</nav>
-		<div class='sidebar' onmouseover='openNav()' onmouseout='closeNav()'>
-			<div class='menu'>
-				<h1 class='menu-title'>M</h1>
-				<h1 class='menu-title'>E</h1>
-				<h1 class='menu-title'>N</h1>
-				<h1 class='menu-title'>U</h1>
-			</div>
-			<a href='#' class='side-text'><i
-					class='left-menu-icon fas fa-search'
-				></i>Search</a>
-			<a href='#' class='side-text'><i
-					class='left-menu-icon fas fa-home'
-				></i>Home</a>
-			<a href='#' class='side-text'><i
-					class='left-menu-icon fas fa-users'
-				></i>Account</a>
-			<a href='#' class='side-text'><i
-					class='left-menu-icon fas fa-bookmark'
-				></i>Bookmark</a>
-			<a href='#' class='side-text'><i class='left-menu-icon fas fa-tv'></i>TV
-				Shows</a>
-			<a href='#' class='side-text'><i
-					class='left-menu-icon fas fa-film'
-				></i>Films</a>
-			<a href='#' class='side-text'><i
-					class='left-menu-icon fas fa-hourglass-start'
-				></i>Upcoming</a>
-		</div>
+		
 		<div class='container'>
 			<div
 				class='content-container'
@@ -318,73 +284,9 @@
 		</div>
 
 		<!-- CHAT BAR BLOCK -->
-		<div class='chat-bar-collapsible'>
-			<button id='chat-button' type='button' class='collapsible'>Leave a
-				comment...
-				<i
-					id='chat-icon'
-					style='color: #fff;'
-					class='fa fa-fw fa-comments-o'
-				></i>
-			</button>
+		
+		{{> chatbox}}
 
-			<div class='content'>
-				<div class='full-chat-block'>
-					<!-- Message Container -->
-					<div class='outer-container'>
-						<div class='chat-container'>
-							<!-- Messages -->
-							<div id='chatbox'>
-								<h5 id='chat-timestamp'></h5>
-								<p id='botStarterMessage' class='botText'><span
-									>Loading...</span></p>
-							</div>
-
-							<!-- User input box -->
-							<div class='chat-bar-input-block'>
-								<div id='userInput'>
-									<input
-										id='textInput'
-										class='input-box'
-										type='text'
-										name='msg'
-										placeholder="Tap 'Enter' to send a message"
-									/>
-									<p></p>
-								</div>
-
-								<div class='chat-bar-icons'>
-									<i
-										id='chat-icon'
-										style='color: crimson;'
-										class='fa fa-fw fa-heart'
-										onclick='heartButton()'
-									></i>
-									<i
-										id='chat-icon'
-										style='color: #333;'
-										class='fa fa-fw fa-send'
-										onclick='sendButton()'
-									></i>
-								</div>
-							</div>
-
-							<div id='chat-bar-bottom'>
-								<p></p>
-							</div>
-
-						</div>
-					</div>
-
-				</div>
-			</div>
-
-		</div>
-		<script src='./assets/js/side.js'></script>
-		<script src='./assets/js/chatbox.js'></script>
-		<script
-			src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'
-		></script>
 	</body>
 
 </html>

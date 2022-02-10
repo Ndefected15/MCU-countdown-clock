@@ -1,0 +1,85 @@
+<html lang='en'>
+
+	<head>
+		<meta charset='UTF-8' />
+		<meta http-equiv='X-UA-Compatible' content='IE=edge' />
+		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+		<link rel='stylesheet' href='/css/movie-page.css' />
+		<link rel='stylesheet' href='/css/chat.css' />
+		<link
+			href='https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap'
+			rel='stylesheet'
+		/>
+		<link
+			rel='stylesheet'
+			href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css'
+		/>
+		<link
+			rel='stylesheet'
+			href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'
+		/>
+		<title>MCU Countdown</title>
+	</head>
+
+	<body>
+		<div class='wrapper'>
+			<header>
+				<h1>
+					<a href='/'>MCU Countdown</a>
+				</h1>
+
+			</header>
+			<main>
+				{{{body}}}
+			</main>
+			<footer>
+				Thanks for visiting!
+			</footer>
+		</div>
+		<nav class='navbar'>
+			<img
+				src='/images/Logo/Marvel_Cinematic_Universe_Logo-.png'
+				class='brand-logo'
+				alt=''
+			/>
+		</nav>
+		<div class='sidebar' onmouseover='openNav()' onmouseout='closeNav()'>
+			<div class='menu'>
+				<h1 class='menu-title'>M</h1>
+				<h1 class='menu-title'>E</h1>
+				<h1 class='menu-title'>N</h1>
+				<h1 class='menu-title'>U</h1>
+			</div>
+			<a href='#' class='side-text'><i
+					class='left-menu-icon fas fa-search'
+				></i>Search</a>
+			<a href='#' class='side-text'><i
+					class='left-menu-icon fas fa-home'
+				></i>Home</a>
+			<a href='#' class='side-text'><i
+					class='left-menu-icon fas fa-users'
+				></i>Account</a>
+			<a href='#' class='side-text'><i
+					class='left-menu-icon fas fa-bookmark'
+				></i>Bookmark</a>
+			<a href='#' class='side-text'><i class='left-menu-icon fas fa-tv'></i>TV
+				Shows</a>
+			<a href='#' class='side-text'><i
+					class='left-menu-icon fas fa-film'
+				></i>Films</a>
+			<a href='#' class='side-text'><i
+					class='left-menu-icon fas fa-hourglass-start'
+				></i>Upcoming</a>
+		</div>
+
+		{{chatbox}}
+		<script src='/js/side.js'></script>
+		<script src='/js/chatbox.js'></script>
+		<script
+			src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'
+		></script>
+	</body>
+
+</html>
+
+{{! FULL HOME PAGE }}

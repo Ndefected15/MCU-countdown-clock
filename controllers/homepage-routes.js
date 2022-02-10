@@ -1,43 +1,35 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const { Post, User, Comment, Vote } = require('../models');
+const { Films, Phase, Post, User, Comment, Vote } = require('../models');
 
-// get all posts for homepage
+// get all posts for main
 router.get('/', (req, res) => {
 	console.log('======================');
-	Post.findAll({
+	Films.findAll({
 		attributes: [
 			'id',
-			'post_url',
 			'title',
-			'created_at',
-			[
-				sequelize.literal(
-					'(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'
-				),
-				'vote_count',
-			],
+			'overview',
+			'release_date',
+			'directed_by',
+			'poster_horizontal',
+			'background',
+			'release_date',
+			'logo',
 		],
-		include: [
+
+		includes: [
 			{
-				model: Comment,
-				attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
-				include: {
-					model: User,
-					attributes: ['username'],
-				},
-			},
-			{
-				model: User,
-				attributes: ['username'],
+				model: Phase,
+				attributes: ['phase_order'],
 			},
 		],
 	})
 		.then((dbPostData) => {
-			const posts = dbPostData.map((post) => post.get({ plain: true }));
+			const films = dbPostData.map((post) => post.get({ plain: true }));
 
 			res.render('homepage', {
-				posts,
+				films,
 				loggedIn: req.session.loggedIn,
 			});
 		})
