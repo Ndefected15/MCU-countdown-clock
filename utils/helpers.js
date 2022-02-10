@@ -16,7 +16,10 @@ module.exports = {
     if (amount !== 1) {
       return `${word}s`;
     }
-
     return word;
+  },
+  indexOf: (array, value) => {
+    console.log("WORKING");
+    return array[value];
   }
 };

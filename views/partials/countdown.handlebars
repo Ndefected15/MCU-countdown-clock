@@ -6,11 +6,12 @@
         for (let i = 0; i < titles.length; i++) {
             titles[i].onclick = () => {
             let filmId = titles[i].id;
-            let filmTitle = "{{films.[1].title}}";
-            let releaseDate = "{{films.[1].release_date}}";
-            console.log(filmId);
-            console.log('{{films.[1].title}}');
-            console.log('{{films.[1].release_date}}');
+            filmId = parseInt(filmId);
+            let filmTitle = "{{films.[5].title}}";
+            let releaseDate = "{{films.[5].release_date}}";
+            
+            console.log('{{films.[5].title}}');
+            console.log('{{films.[5].release_date}}');
             countdownHandler(releaseDate, filmTitle);
             } 
         }
