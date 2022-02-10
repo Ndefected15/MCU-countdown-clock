@@ -1,0 +1,112 @@
+<!-- CHAT BAR BLOCK -->
+
+<div class='chat-bar-collapsible'>
+	<button id='chat-button' type='button' class='collapsible'>Leave a comment...
+		<i id='chat-icon' style='color: #fff;' class='fa fa-fw fa-comments-o'></i>
+	</button>
+
+	<div class='content'>
+		<div class='full-chat-block'>
+			<!-- Message Container -->
+			<div class='outer-container'>
+				<div class='chat-container'>
+                    {{> post-info post}}
+
+                    {{#if loggedIn}}
+                    <form class="comment-form">
+                        <div>
+                        <textarea name="comment-body"></textarea>
+                    </div>
+
+                    <div>
+                        <button type="submit">add comment</button>
+                        <button type="button" class="upvote-btn">upvote</button>
+                    </div>
+                    </form>
+                    {{/if}}
+
+                    {{!-- Comments --}}
+                    {{> comments post.comments}}
+					
+					<!-- User input box -->
+					<div class='chat-bar-input-block'>
+
+						<section>
+							<h2>Create New Post</h2>
+
+							<form class='new-post-form'>
+								<div>
+									<label for='post-title'>Title</label>
+									<input type='text' id='post-title' name='post-title' />
+								</div>
+								<div>
+									<label for='post-url'>Link</label>
+									<input id='post-url' name='post-url' />
+								</div>
+								<button type='submit' class='btn'>Create</button>
+							</form>
+						</section>
+                        {{#if posts.length}}
+						<section>
+							<h2>Your Posts</h2>
+							<ol>
+                                {{#each posts as |post|}}
+								<li>
+                                    {{> post-info post}}
+									<a href='/dashboard/edit/{{post.id}}' class='edit-link'>Edit
+										post</a>
+								</li>
+                                {{/each}}
+							</ol>
+						</section>
+                        {{/if}}
+						<div id='userInput' class='comment-form'>
+							<input
+								id='textInput'
+								class='input-box'
+								type='text'
+								name='msg comment-body'
+								placeholder="Tap 'Enter' to send a message"
+							/>
+							<p></p>
+						</div>
+
+						<div class='chat-bar-icons'>
+							{{! <i
+								id='chat-icon'
+								style='color: crimson;'
+								class='fa fa-fw fa-heart'
+								onclick='heartButton()'
+							></i> }}
+							<i
+								id='chat-icon'
+								style='color: #333;'
+								class='fa fa-fw fa-send'
+								type='submit'
+								onclick='sendButton()'
+							></i>
+						</div>
+					</div>
+
+					<div id='chat-bar-bottom'>
+						<p></p>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</div>
+
+<script src='/javascript/add-post.js'></script>
+<script src='./assets/js/chatbox.js'></script>
+<script src='/javascript/edit-post.js'></script>
+<script src='/javascript/delete-post.js'></script>
+{{!-- <script src='/javascript/comment.js'></script> --}}
+
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+<script src="/javascript/upvote.js"></script>
+{{/if}}

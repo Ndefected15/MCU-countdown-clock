@@ -1,0 +1,74 @@
+<html lang='en'>
+
+	<head>
+		<meta charset='UTF-8' />
+		<meta http-equiv='X-UA-Compatible' content='IE=edge' />
+		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+		<link rel='stylesheet' href='/css/movie-page.css' />
+		<link rel='stylesheet' href='/css/chat.css' />
+		<link
+			href='https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap'
+			rel='stylesheet'
+		/>
+		<link
+			rel='stylesheet'
+			href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css'
+		/>
+		<link
+			rel='stylesheet'
+			href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'
+		/>
+		<title>Marvel Cinematic Universe</title>
+	</head>
+
+	<body>
+		
+		<div class='container'>
+			<div
+				class='content-container'
+				style="background: linear-gradient(to left, rgba(0,0,0,0), #151515), url('images/{{films.[0].background}}'); background-repeat: no-repeat;   background-size: cover;"
+			>
+				<div class='featured-content' id="{{films.id}}">
+					<img
+						class='featured-title'
+						src='images/{{films.[0].logo}}'
+						alt=''
+					/>
+					<p class='featured-desc'>{{films.[0].overview}}
+					</p>
+					<button class='featured-button'>WATCH</button>
+				</div>
+				<div class='movie-list-container'>
+					<h1 class='movie-list-title'>Upcoming</h1>
+					<div class='movie-list-wrapper'>
+						<div class='movie-list'>
+
+                             {{#each films as |film|}}
+                             <div class='movie-list-item'>
+								<img
+									class='movie-list-item-img'
+									src="/images/{{film.poster_horizontal}}"
+									alt=''
+									style='background: linear-gradient(rgb(48, 50, 62), rgb(30, 31, 42));'
+								/>
+								<a href="/movie-page" target="_blank">
+    							<button class='movie-list-item-button'>WATCH</button>
+								</a>
+							</div>
+      
+                            {{/each}}
+							
+						</div>
+						<i class='fas fa-chevron-right arrow'></i>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- CHAT BAR BLOCK -->
+		
+		{{> chatbox}}
+
+	</body>
+
+</html>
