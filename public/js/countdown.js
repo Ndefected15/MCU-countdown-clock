@@ -1,121 +1,122 @@
-// Temporary test values for demo
-// const futureDate = '2022, 3, 8';
-// const pastDate = '2021, 9, 2';
-
 // Method to handle the countdown logic and making changes to front-end footer
 let countdownHandler = (releaseDate, filmTitle) => {
-    // Extracts film's release date
-    const countdownDate = new Date(releaseDate).getTime();
+	// Extracts film's release date
+	const countdownDate = new Date(releaseDate).getTime();
 
-    let footerText = document.querySelector('.footer');
+	let footerText = document.querySelector('.footer');
 
-    // Sets an interval to repeat instructions every second, thus creating the countdown
-    setInterval(() => {
-        const now = new Date().getTime();
+	// Sets an interval to repeat instructions every second, thus creating the countdown
+	setInterval(() => {
+		const now = new Date().getTime();
+		let distance;
 
-        let distance = countdownDate - now;
+		if (countdownDate >= now) {
+			distance = countdownDate - now;
+		} else {
+			distance = now - countdownDate;
+		}
+		// Sets logic for timer and then calls function to format front-end
+		setCountdown(distance, countdownDate, now, filmTitle, footerText);
+	}, 1000); // Interval of 1 second
+};
 
-        // Logic for timer
-        let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        let hours = Math.floor(
-            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+let setCountdown = (distance, countdownDate, now, filmTitle, footerText) => {
+    // Offset prevents there being 0 seconds twice when countdown switches direction
+	let timerOffset;
+	if (countdownDate >= now) {
+		timerOffset = 0;
+	} else {
+		timerOffset = 1;
+	}
+	let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+	let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+	let seconds = Math.floor((distance % (1000 * 60)) / 1000) + timerOffset;
 
-        // Logic for displaying dynamic countdown data
-        if (days !== 0) {
-            footerText.innerHTML =
-            '<span>' + filmTitle + '&nbsp</span>releases in...&nbsp<span>' +
-            days +
-            'd ' +
-            hours +
-            'h ' +
-            minutes +
-            'm ' +
-            seconds +
-            's </span>';
-        } else if (days === 0 & hours === 0 & minutes === 0) {
-            footerText.innerHTML =
-            '<span>' + filmTitle + '&nbsp</span>releases in...&nbsp<span>' +
-            seconds +
-            's </span>';
-        } else if (days === 0 & hours === 0) {
-            footerText.innerHTML =
-            '<span>' + filmTitle + '&nbsp</span>releases in...&nbsp<span>' +
-            minutes +
-            'm ' +
-            seconds +
-            's </span>';
-        } else if (days === 0) {
-            footerText.innerHTML =
-            '<span>' + filmTitle + '&nbsp</span>releases in...&nbsp<span>' +
-            hours +
-            'h ' +
-            minutes +
-            'm ' +
-            seconds +
-            's </span>';
-        }
-        
-        // Logic for films that have already been released
-        if (distance < 0) {
-            distance = now - countdownDate;
+	setCountdownDisplay(
+		countdownDate,
+		now,
+		days,
+		hours,
+		minutes,
+		seconds,
+		filmTitle,
+		footerText
+	);
+};
 
-            // Updating logic for timer
-            days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            hours = Math.floor(
-                (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-            );
-            minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            seconds = Math.floor((distance % (1000 * 60)) / 1000) + 1;
+let setCountdownDisplay = (
+	countdownDate,
+	now,
+	days,
+	hours,
+	minutes,
+	seconds,
+	filmTitle,
+	footerText
+) => {
+	let operator = '';
+	let message = '';
 
-            // Logic for displaying dynamic countown data
-            if (days !== 0) {
-                footerText.innerHTML =
-                '<span>' + filmTitle + '&nbsp</span>was released...&nbsp<span>-' +
-                days +
-                'd ' +
-                hours +
-                'h ' +
-                minutes +
-                'm ' +
-                seconds +
-                's </span>';
-            } else if (days === 0 & hours === 0 & minutes === 0) {
-                footerText.innerHTML =
-                '<span>' + filmTitle + '&nbsp</span>was released...&nbsp<span>-' +
-                seconds +
-                's </span>';
-            } else if (days === 0 & hours === 0) {
-                footerText.innerHTML =
-                '<span>' + filmTitle + '&nbsp</span>was released...&nbsp<span>-' +
-                minutes +
-                'm ' +
-                seconds +
-                's </span>';
-            } else if (days === 0) {
-                footerText.innerHTML =
-                '<span>' + filmTitle + '&nbsp</span>was released...&nbsp<span>-' +
-                hours +
-                'h ' +
-                minutes +
-                'm ' +
-                seconds +
-                's </span>';
-            }
-        }
-    }, 1000); // Interval of 1 second
-}
+	if (countdownDate >= now) {
+		operator = '';
+		message = 'releases in...';
+	} else {
+		operator = '-';
+		message = 'was released...';
+	}
 
-//  Click event listener for every title
-// const titles = document.querySelectorAll('.movie-list-item');
-// if (titles.length !== 0) {
-//   for (let i = 0; i < titles.length; i++) {
-//       titles[i].onclick = () => {
-//           let filmId = titles[i].id;
-//           console.log(filmId);
-//           countdownHandler(releaseDate, filmTitle)
-//       };
-//   }
-// }
+	if (days !== 0) {
+		footerText.innerHTML =
+			'<span>' +
+			filmTitle +
+			'&nbsp</span>' +
+			message +
+			'&nbsp<span>' +
+			operator +
+			days +
+			'd ' +
+			hours +
+			'h ' +
+			minutes +
+			'm ' +
+			seconds +
+			's </span>';
+	} else if ((days === 0) & (hours === 0) & (minutes === 0)) {
+		footerText.innerHTML =
+			'<span>' +
+			filmTitle +
+			'&nbsp</span>' +
+			message +
+			'&nbsp<span>' +
+			operator +
+			seconds +
+			's </span>';
+	} else if ((days === 0) & (hours === 0)) {
+		footerText.innerHTML =
+			'<span>' +
+			filmTitle +
+			'&nbsp</span>' +
+			message +
+			'&nbsp<span>' +
+			operator +
+			minutes +
+			'm ' +
+			seconds +
+			's </span>';
+	} else if (days === 0) {
+		footerText.innerHTML =
+			'<span>' +
+			filmTitle +
+			'&nbsp</span>' +
+			message +
+			'&nbsp<span>' +
+			operator +
+			hours +
+			'h ' +
+			minutes +
+			'm ' +
+			seconds +
+			's </span>';
+	}
+};
