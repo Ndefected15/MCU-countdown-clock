@@ -20,19 +20,24 @@ let countdownHandler = (releaseDate, filmTitle) => {
 	}, 1000); // Interval of 1 second
 };
 
+// Initializes timer and calls method to create front-end
 let setCountdown = (distance, countdownDate, now, filmTitle, footerText) => {
     // Offset prevents there being 0 seconds twice when countdown switches direction
 	let timerOffset;
+
 	if (countdownDate >= now) {
 		timerOffset = 0;
 	} else {
 		timerOffset = 1;
 	}
+
+	// Initializing variables for timer
 	let days = Math.floor(distance / (1000 * 60 * 60 * 24));
 	let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 	let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 	let seconds = Math.floor((distance % (1000 * 60)) / 1000) + timerOffset;
 
+	// Method call for creating countdown display
 	setCountdownDisplay(
 		countdownDate,
 		now,
@@ -45,6 +50,7 @@ let setCountdown = (distance, countdownDate, now, filmTitle, footerText) => {
 	);
 };
 
+// Creates and formats countdown display
 let setCountdownDisplay = (
 	countdownDate,
 	now,
@@ -58,6 +64,7 @@ let setCountdownDisplay = (
 	let operator = '';
 	let message = '';
 
+	// Changes way countdown is displayed depending on if the film was released or not
 	if (countdownDate >= now) {
 		operator = '';
 		message = 'releases in...';
@@ -66,6 +73,7 @@ let setCountdownDisplay = (
 		message = 'was released...';
 	}
 
+	// Dynamically formats countdown by removing obsolete information
 	if (days !== 0) {
 		footerText.innerHTML =
 			'<span>' +
