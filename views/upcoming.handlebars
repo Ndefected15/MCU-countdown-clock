@@ -1,6 +1,58 @@
 <html lang='en'>
 
+	<head>
+		<meta charset='UTF-8' />
+		<meta name='viewport' content='width=device-width' , initial-scale='1' />
+		<title>Disney Clone</title>
+		<link rel='stylesheet' href='./assets/css/upcoming.css' />
+		<link
+			href='https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap'
+			rel='stylesheet'
+		/>
+		<link
+			rel='stylesheet'
+			href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css'
+		/>
+		<link
+			rel='stylesheet'
+			href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'
+		/>
+	</head>
+
 	<body>
+
+		<div class='container'>
+			<input type='radio' name='slider' id='item-1' checked />
+			<input type='radio' name='slider' id='item-2' />
+			<input type='radio' name='slider' id='item-3' />
+			<div class='cards'>
+				<h1 class='card-intro'>Upcoming Movies/TV Shows</h1>
+				<label class='card' for='item-1' id='song-1'>
+					<img src='./assets/images/Posters/Moon_Knight.jpg' alt='song' />
+					<h1 class='card-title'>Moon Knight</h1>
+				</label>
+				<label class='card' for='item-2' id='song-2'>
+					<img
+						src='./assets/images/Posters/Doctor-Strange_MoM.jpg'
+						alt='song'
+					/>
+					<h1 class='card-title'>Doctor Strange
+						<br />
+						in the
+						<br />
+						Multiverse of Madness</h1>
+				</label>
+				<label class='card' for='item-3' id='song-3'>
+					<img
+						src='./assets/images/Posters/Thor_Love_and_Thunder.jpg'
+						alt='song'
+					/>
+					<h1 class='card-title'>Thor: Love and Thunder</h1>
+				</label>
+			</div>
+		</div>
+
+		<script src='./assets/js/script.js'></script>
 
 	</body>
 
