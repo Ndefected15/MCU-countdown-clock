@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const arrows = document.querySelectorAll(".arrow");
 const movieLists = document.querySelectorAll(".movie-list");
 
@@ -21,8 +20,6 @@ arrows.forEach((arrow, i) => {
     console.log(Math.floor(window.innerWidth / 270));
 });
 
-=======
->>>>>>> feature/countdown
 var slideIndex = 1;
 showSlides(slideIndex);
 
