@@ -6,6 +6,11 @@
 		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 		<link rel='stylesheet' href='/css/movie-page.css' />
 		<link rel='stylesheet' href='/css/chat.css' />
+		<link rel='stylesheet' href='/css/countdown.css' />
+		<link
+			href='https://fonts.googleapis.com/css?family=Bangers'
+			rel='stylesheet'
+		/>
 		<link
 			href='https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap'
 			rel='stylesheet'
@@ -44,7 +49,7 @@
 						<div class='movie-list'>
 
                              {{#each films as |film|}}
-                             <div class='movie-list-item'>
+                             <div class='movie-list-item' id='{{film.id}}'>
 								<img
 									class='movie-list-item-img'
 									src="/images/{{film.poster_horizontal}}"
@@ -68,7 +73,7 @@
 		<!-- CHAT BAR BLOCK -->
 		
 		{{> chatbox}}
-
+		{{> countdown}}
 	</body>
 
 </html>
