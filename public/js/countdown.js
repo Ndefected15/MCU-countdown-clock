@@ -42,7 +42,7 @@ const setCountdownTimer = (distance, isReleased) => {
         timerOffset = 1;
     }
 
-    // Initializing variables for timer
+    // Initializing timer values
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
     const hours = Math.floor(
         (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
@@ -88,16 +88,17 @@ const getFilmData = (id) =>
     fetch(`/api/films/${id}`, {
         method: 'GET',
     })
-        .then((res) => res.json())
-        .then((data) => data);
+		.then((res) => res.json())
+		.then((data) => data);
 
+// TODO: Implement countdown functionality for tv shows
 // Fetches from API to get tv show information
 const getTvShowData = (id) =>
     fetch(`/api/tvshow/${id}`, {
         method: 'GET',
     })
-        .then((res) => res.json())
-        .then((data) => data);
+		.then((res) => res.json())
+		.then((data) => data);
 
 const countdownSelectionListener = () => {
     //  Click event listener for every title
@@ -113,6 +114,7 @@ const countdownSelectionListener = () => {
                 getFilmData(filmId).then((film) => {
                     let releaseDate = film.release_date;
                     let filmTitle = film.title;
+
                     clearInterval(countdownInterval); // Clears previous countdown
                     countdownHandler(releaseDate, filmTitle); // Calls new countdown
                 });

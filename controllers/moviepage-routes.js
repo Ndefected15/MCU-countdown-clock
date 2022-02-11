@@ -36,40 +36,20 @@ router.get('/', (req, res) => {
         });
 });
 
-// get single post
-router.get('/:id', (req, res) => {
-    console.log('======================');
-    Films.findOne({
-            attributes: [
-                'id',
-                'title',
-                'overview',
-                'release_date',
-                'directed_by',
-                'poster_horizontal',
-                'background',
-                'release_date',
-                'logo'
-            ],
-            where: {
-                id: req.params.id
-            },
-            includes: [{
-                model: Phase,
-                attributes: ['phase_order'],
-            }, ],
-        })
-        .then((dbPostData) => {
-            const films = dbPostData.map((post) => post.get({ plain: true }));
 
-            res.render('movie-page', {
-                films,
-            });
-        })
-        .catch((err) => {
-            console.log(err);
-            res.status(500).json(err);
-        });
+
+router.get('/films/:id', async(req, res) => {
+    try {
+        const dbFilmsData = await Films.findByPk(req.params.id);
+
+        const films = dbFilmsData.get({ plain: true });
+
+        console.log(films)
+        res.render('movie-page', { films });
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
 });
 
 router.get('/login', (req, res) => {
