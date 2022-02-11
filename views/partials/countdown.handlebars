@@ -1,19 +1,1 @@
 <footer class="footer"><span>Select a title to view its release!</span></footer>
-<script>
-    //  Click event listener for every title
-    const titles = document.querySelectorAll('.movie-list-item');
-    if (titles.length !== 0) {
-        for (let i = 0; i < titles.length; i++) {
-            titles[i].onclick = () => {
-            let filmId = titles[i].id;
-            filmId = parseInt(filmId);
-            let filmTitle = "{{films.[4].title}}";
-            let releaseDate = "{{films.[4].release_date}}";
-            
-            console.log('{{films.[4].title}}');
-            console.log('{{films.[4].release_date}}');
-            countdownHandler(releaseDate, filmTitle);
-            } 
-        }
-    }
-</script>
