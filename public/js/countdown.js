@@ -1,3 +1,7 @@
+// Test values for demo
+let date1 = "Apr 17, 2022";
+let date2 = "Nov 13, 2021";
+
 // Method to handle the countdown logic and making changes to front-end footer
 let countdownHandler = (releaseDate, filmTitle) => {
 	// Extracts film's release date
