@@ -2,48 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" , initial-scale="1">
-    <title>Disney Clone</title>
-    <link rel="stylesheet" href="/css/upcoming.css">
     <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/login2.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <nav class="navbar">
-        <img src="/images/Logo/Marvel_Cinematic_Universe_Logo-.png" class="brand-logo" alt="">
-    </nav>
-		<div class='sidebar' onmouseover='openNav()' onmouseout='closeNav()'>
-			<div class='menu'>
-				<h1 class='menu-title'>M</h1>
-				<h1 class='menu-title'>E</h1>
-				<h1 class='menu-title'>N</h1>
-				<h1 class='menu-title'>U</h1>
-			</div>
-			<a href='#' class='side-text'><i
-					class='left-menu-icon fas fa-search icon-margin'
-				></i> &nbsp;Search</a>
-			<a href='/' class='side-text'><i
-					class='left-menu-icon fas fa-home icon-margin'
-				></i> &nbsp;Home</a>
-			<a href='/login' class='side-text'><i
-					class='left-menu-icon fas fa-users icon-margin'
-				></i> &nbsp;Account</a>
-			<a href='#' class='side-text'><i
-					class='left-menu-icon fas fa-bookmark icon-margin'
-				></i> &nbsp;Bookmark</a>
-			<a href='/tvshow' class='side-text'><i class='left-menu-icon fas fa-tv icon-margin'></i> TV
-				Shows</a>
-			<a href='/' class='side-text'><i
-					class='left-menu-icon fas fa-film icon-margin'
-				></i> &nbsp;Films</a>
-			<a href='/upcoming' class='side-text'><i
-					class='left-menu-icon fas fa-hourglass-start icon-margin'
-				></i> &nbsp;Upcoming</a>
-		</div>
+    {{>navbar}}
 
     <!-- LOGIN FORM -->
     <section class="forms-section">
@@ -53,16 +20,16 @@
               Login
               <span class="underline"></span>
             </button>
-                <form class="form form-login">
+                <form class="form login-form">
                     <fieldset>
                         <legend>Please, enter your email and password for login.</legend>
                         <div class="input-block">
-                            <label for="login-email">E-mail</label>
-                            <input id="login-email" type="email" required>
+                            <label for="email-login">E-mail</label>
+                            <input id="email-login" type="email" required>
                         </div>
                         <div class="input-block">
-                            <label for="login-password">Password</label>
-                            <input id="login-password" type="password" required>
+                            <label for="password-login">Password</label>
+                            <input id="password-login" type="password" required>
                         </div>
                     </fieldset>
                     <button type="submit" class="btn-login">Login</button>
@@ -73,20 +40,16 @@
               Sign Up
               <span class="underline"></span>
             </button>
-                <form class="form form-signup">
+                <form class="form signup-form">
                     <fieldset>
                         <legend>Please, enter your email, password and password confirmation for sign up.</legend>
                         <div class="input-block">
-                            <label for="signup-email">E-mail</label>
-                            <input id="signup-email" type="email" required>
+                            <label for="email-signup">E-mail</label>
+                            <input id="email-signup" type="email" required>
                         </div>
                         <div class="input-block">
-                            <label for="signup-password">Password</label>
-                            <input id="signup-password" type="password" required>
-                        </div>
-                        <div class="input-block">
-                            <label for="signup-password-confirm">Confirm password</label>
-                            <input id="signup-password-confirm" type="password" required>
+                            <label for="password-signup">Password</label>
+                            <input id="password-signup" type="password" required>
                         </div>
                     </fieldset>
                     <button type="submit" class="btn-signup">Continue</button>
@@ -96,6 +59,7 @@
     </section>
 
     <script src="/js/login.js"></script>
+    <script src="/js/side.js"></script>
 
 </body>
 

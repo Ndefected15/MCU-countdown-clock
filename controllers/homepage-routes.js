@@ -5,6 +5,7 @@ const { Films, Phase, Post, User, Comment, Vote } = require('../models');
 // get all posts for main
 router.get('/', (req, res) => {
     console.log('======================');
+    console.log(req.session);
     Films.findAll({
             attributes: [
                 'id',
@@ -59,12 +60,12 @@ router.get('/post/:id', (req, res) => {
                     attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
                     include: {
                         model: User,
-                        attributes: ['username'],
+                        attributes: ['email'],
                     },
                 },
                 {
                     model: User,
-                    attributes: ['username'],
+                    attributes: ['email'],
                 },
             ],
         })

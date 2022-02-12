@@ -1,5 +1,4 @@
-// SIDEBAR
-const sidetext = document.querySelectorAll(".side-text")
+var sidetext = document.querySelectorAll(".side-text")
 
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
 function openNav() {

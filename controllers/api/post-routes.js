@@ -19,18 +19,19 @@ router.get('/', (req, res) => {
 				'vote_count',
 			],
 		],
+		order: [['created_at', 'DESC']],
 		include: [
 			{
 				model: Comment,
 				attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
 				include: {
 					model: User,
-					attributes: ['username'],
+					attributes: ['email'],
 				},
 			},
 			{
 				model: User,
-				attributes: ['username'],
+				attributes: ['email'],
 			},
 		],
 	})
@@ -64,12 +65,12 @@ router.get('/:id', (req, res) => {
 				attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
 				include: {
 					model: User,
-					attributes: ['username'],
+					attributes: ['email'],
 				},
 			},
 			{
 				model: User,
-				attributes: ['username'],
+				attributes: ['email'],
 			},
 		],
 	})
