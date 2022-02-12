@@ -19,6 +19,7 @@ router.get('/', (req, res) => {
 				'vote_count',
 			],
 		],
+		order: [['created_at', 'DESC']],
 		include: [
 			{
 				model: Comment,
