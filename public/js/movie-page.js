@@ -106,7 +106,7 @@ $("#textInput").keypress(function(e) {
 
 const arrows = document.querySelectorAll(".arrow");
 const movieLists = document.querySelectorAll(".movie-list");
-const sidetext = document.querySelectorAll(".side-text")
+var sidetext = document.querySelectorAll(".side-text")
 
 arrows.forEach((arrow, i) => {
     const itemNumber = movieLists[i].querySelectorAll("img").length;

@@ -32,41 +32,8 @@
 				{{{body}}}
 			</main>
 		</div>
-		<nav class='navbar'>
-			<img
-				src='/images/Logo/Marvel_Cinematic_Universe_Logo-.png'
-				class='brand-logo'
-				alt=''
-			/>
-		</nav>
-		<div class='sidebar' onmouseover='openNav()' onmouseout='closeNav()'>
-			<div class='menu'>
-				<h1 class='menu-title'>M</h1>
-				<h1 class='menu-title'>E</h1>
-				<h1 class='menu-title'>N</h1>
-				<h1 class='menu-title'>U</h1>
-			</div>
-			<a href='#' class='side-text'><i
-					class='left-menu-icon fas fa-search icon-margin'
-				></i> &nbsp;Search</a>
-			<a href='/' class='side-text'><i
-					class='left-menu-icon fas fa-home icon-margin'
-				></i> &nbsp;Home</a>
-			<a href='/login' class='side-text'><i
-					class='left-menu-icon fas fa-users icon-margin'
-				></i> &nbsp;Account</a>
-			<a href='#' class='side-text'><i
-					class='left-menu-icon fas fa-bookmark icon-margin'
-				></i> &nbsp;Bookmark</a>
-			<a href='/tvshow' class='side-text'><i class='left-menu-icon fas fa-tv icon-margin'></i> TV
-				Shows</a>
-			<a href='/' class='side-text'><i
-					class='left-menu-icon fas fa-film icon-margin'
-				></i> &nbsp;Films</a>
-			<a href='/upcoming' class='side-text'><i
-					class='left-menu-icon fas fa-hourglass-start icon-margin'
-				></i> &nbsp;Upcoming</a>
-		</div>
+		{{>navbar}}
+		
 		<script src='/js/countdown.js'></script>
 		<script src='/js/side.js'></script>
 		<script src='/js/chatbox.js'></script>

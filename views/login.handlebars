@@ -2,48 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" , initial-scale="1">
-    <title>Disney Clone</title>
-    <link rel="stylesheet" href="/css/upcoming.css">
     <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/login2.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <nav class="navbar">
-        <img src="/images/Logo/Marvel_Cinematic_Universe_Logo-.png" class="brand-logo" alt="">
-    </nav>
-		<div class='sidebar' onmouseover='openNav()' onmouseout='closeNav()'>
-			<div class='menu'>
-				<h1 class='menu-title'>M</h1>
-				<h1 class='menu-title'>E</h1>
-				<h1 class='menu-title'>N</h1>
-				<h1 class='menu-title'>U</h1>
-			</div>
-			<a href='#' class='side-text'><i
-					class='left-menu-icon fas fa-search icon-margin'
-				></i> &nbsp;Search</a>
-			<a href='/' class='side-text'><i
-					class='left-menu-icon fas fa-home icon-margin'
-				></i> &nbsp;Home</a>
-			<a href='/login' class='side-text'><i
-					class='left-menu-icon fas fa-users icon-margin'
-				></i> &nbsp;Account</a>
-			<a href='#' class='side-text'><i
-					class='left-menu-icon fas fa-bookmark icon-margin'
-				></i> &nbsp;Bookmark</a>
-			<a href='/tvshow' class='side-text'><i class='left-menu-icon fas fa-tv icon-margin'></i> TV
-				Shows</a>
-			<a href='/' class='side-text'><i
-					class='left-menu-icon fas fa-film icon-margin'
-				></i> &nbsp;Films</a>
-			<a href='/upcoming' class='side-text'><i
-					class='left-menu-icon fas fa-hourglass-start icon-margin'
-				></i> &nbsp;Upcoming</a>
-		</div>
+    {{>navbar}}
 
     <!-- LOGIN FORM -->
     <section class="forms-section">
@@ -96,6 +63,7 @@
     </section>
 
     <script src="/js/login.js"></script>
+    <script src="/js/side.js"></script>
 
 </body>
 
