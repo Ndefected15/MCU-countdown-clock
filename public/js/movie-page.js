@@ -15,6 +15,35 @@ for (let i = 0; i < coll.length; i++) {
 	});
 }
 
+// Handles sending text via button clicks
+function buttonSendText(sampleText) {
+	let userHtml = '<p class="userText"><span>' + sampleText + '</span></p>';
+
+	$('#textInput').val('');
+	$('#chatbox').append(userHtml);
+	document.getElementById('chat-bar-bottom').scrollIntoView(true);
+
+	//Uncomment this if you want the bot to respond to this buttonSendText event
+	// setTimeout(() => {
+	//     getHardResponse(sampleText);
+	// }, 1000)
+}
+
+function sendButton() {
+	getResponse();
+}
+
+function heartButton() {
+	buttonSendText('Heart clicked!');
+}
+
+// Press enter to send a message
+$('#textInput').keypress(function (e) {
+	if (e.which == 13) {
+		getResponse();
+	}
+});
+
 const arrows = document.querySelectorAll('.arrow');
 const movieLists = document.querySelectorAll('.movie-list');
 var sidetext = document.querySelectorAll('.side-text');
