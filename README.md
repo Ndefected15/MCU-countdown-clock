@@ -25,6 +25,8 @@ Clone this repo, and ensure you have node downloaded and installed on your machi
 
 Use this full stack web application to create accounts, comments and keep track of all MCU film releases!
 
+![image](https://user-images.githubusercontent.com/92278942/153792705-f5a78363-d99b-47c2-adc7-b67bc7654432.png)
+
 ## License:
 
 MIT
