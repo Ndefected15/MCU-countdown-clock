@@ -12,5 +12,4 @@ router.use('/comments', commentRoutes);
 router.use('/films', filmsRoutes);
 router.use('/tvshow', tvShowRoutes);
 
-
 module.exports = router;

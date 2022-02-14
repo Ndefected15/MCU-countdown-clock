@@ -1,0 +1,40 @@
+<nav class='navbar'>
+	<img
+		src='/images/Logo/Marvel_Cinematic_Universe_Logo-.png'
+		class='brand-logo'
+		alt=''
+	/>
+</nav>
+<div class='sidebar' onmouseover='openNav()' onmouseout='closeNav()'>
+	<div class='menu'>
+		<h1 class='menu-title'>M</h1>
+		<h1 class='menu-title'>E</h1>
+		<h1 class='menu-title'>N</h1>
+		<h1 class='menu-title'>U</h1>
+	</div>
+	<a href='#' class='side-text'><i
+			class='left-menu-icon fas fa-search'
+		></i>Search</a>
+	<a href='/' class='side-text'><i
+			class='left-menu-icon fas fa-home'
+		></i>Home</a>
+	<a href='/login' class='side-text'><i
+			class='left-menu-icon fas fa-users'
+		></i>Account</a>
+	<a href='#' class='side-text'><i
+			class='left-menu-icon fas fa-bookmark'
+		></i>Bookmark</a>
+	<a href='/tvshow' class='side-text'><i class='left-menu-icon fas fa-tv'></i>TV Shows</a>
+	<a href='/' class='side-text'><i
+			class='left-menu-icon fas fa-film'
+		></i>Films</a>
+	<a href='/upcoming' class='side-text'><i
+			class='left-menu-icon fas fa-hourglass-start'
+		></i>Upcoming</a>
+	{{#if loggedIn}}
+ 	<a href="/login" class='side-text' id='logout'><i
+  			class='left-menu-icon fas fa-users'
+ 	  	></i>Logout</a>
+    {{/if}}
+ 
+</div>

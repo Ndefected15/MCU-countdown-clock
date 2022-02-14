@@ -4,7 +4,7 @@ const { Films, Phase, Post, User, Comment, Vote } = require('../models');
 
 // get all posts for main
 router.get('/', (req, res) => {
-    console.log('======================');
+    // find all products
     Films.findAll({
             attributes: [
                 'id',
@@ -17,28 +17,21 @@ router.get('/', (req, res) => {
                 'release_date',
                 'logo',
             ],
-
             includes: [{
                 model: Phase,
                 attributes: ['phase_order'],
             }, ],
         })
-        .then((dbPostData) => {
-            const films = dbPostData.map((post) => post.get({ plain: true }));
-
-            res.render('login', {
-                films,
-            });
-        })
+        .then((dbFilmData) => res.json(dbFilmData))
         .catch((err) => {
             console.log(err);
             res.status(500).json(err);
         });
+    // be sure to include its associated Category and Tag data
 });
 
 // get single post
 router.get('/:id', (req, res) => {
-    console.log('======================');
     Films.findOne({
             attributes: [
                 'id',
@@ -49,23 +42,17 @@ router.get('/:id', (req, res) => {
                 'poster_horizontal',
                 'background',
                 'release_date',
-                'logo'
+                'logo',
             ],
             where: {
-                id: req.params.id
+                id: req.params.id,
             },
             includes: [{
                 model: Phase,
                 attributes: ['phase_order'],
             }, ],
         })
-        .then((dbPostData) => {
-            const films = dbPostData.map((post) => post.get({ plain: true }));
-
-            res.render('login', {
-                films,
-            });
-        })
+        .then((dbFilmData) => res.json(dbFilmData))
         .catch((err) => {
             console.log(err);
             res.status(500).json(err);
@@ -78,7 +65,7 @@ router.get('/login', (req, res) => {
         return;
     }
 
-    res.render('login');
+    res.render('login', { layout: false });
 });
 
 module.exports = router;

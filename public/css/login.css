@@ -218,14 +218,14 @@ body {
     transform-origin: top;
 }
 
-.form-login {
+.login-form {
     animation: hideLogin .3s ease-out forwards;
     height: 700px;
     width: 700px;
     padding: 10%;
 }
 
-.form-wrapper.is-active .form-login {
+.form-wrapper.is-active .login-form {
     animation: showLogin .3s ease-in forwards;
     height: 700px;
     width: 700px;
@@ -260,14 +260,14 @@ body {
     }
 }
 
-.form-signup {
+.signup-form {
     animation: hideSignup .3s ease-out forwards;
     height: 700px;
     width: 700px;
     padding: 10%;
 }
 
-.form-wrapper.is-active .form-signup {
+.form-wrapper.is-active .signup-form {
     animation: showSignup .3s ease-in forwards;
     height: 700px;
     width: 700px;
@@ -312,11 +312,11 @@ body {
     height: 80%;
 }
 
-.form-login fieldset {
+.login-form fieldset {
     transform: translateX(-50%);
 }
 
-.form-signup fieldset {
+.signup-form fieldset {
     transform: translateX(50%);
 }
 

@@ -1,13 +1,13 @@
 <article class='post'>
 	<div class='title'>
-		<a href='{{post_url}}' target='_blank'>{{title}}</a>
-		<span>({{post_url}})</span>
+		<a href='{{post_comment}}' target='_blank'>{{title}}</a>
+		<span>({{post_comment}})</span>
 	</div>
 	<div class='meta'>
 		{{vote_count}}
 		{{format_plural 'point' vote_count}}
 		by
-		{{user.username}}
+		{{user.email}}
 		on
 		{{format_date created_at}}
 		|

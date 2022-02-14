@@ -1,84 +1,63 @@
 const router = require('express').Router();
-const sequelize = require('../config/connection');
-const { Films, Phase, Post, User, Comment, Vote } = require('../models');
+const { Films, Phase } = require('../models');
 
-// get all posts for main
+// get all films for moviepage
 router.get('/', (req, res) => {
-    console.log('======================');
-    Films.findAll({
-            attributes: [
-                'id',
-                'title',
-                'overview',
-                'release_date',
-                'directed_by',
-                'poster_horizontal',
-                'background',
-                'release_date',
-                'logo',
-            ],
+	console.log('======================');
+	Films.findAll({
+		attributes: [
+			'id',
+			'title',
+			'overview',
+			'release_date',
+			'directed_by',
+			'poster_horizontal',
+			'background',
+			'release_date',
+			'logo',
+		],
 
-            includes: [{
-                model: Phase,
-                attributes: ['phase_order'],
-            }, ],
-        })
-        .then((dbPostData) => {
-            const films = dbPostData.map((post) => post.get({ plain: true }));
+		includes: [
+			{
+				model: Phase,
+				attributes: ['phase_order'],
+			},
+		],
+	})
+		.then((dbPostData) => {
+			const films = dbPostData.map((post) => post.get({ plain: true }));
 
-            res.render('movie-page', {
-                films,
-            });
-        })
-        .catch((err) => {
-            console.log(err);
-            res.status(500).json(err);
-        });
+			res.render('movie-page', {
+				films,
+			});
+		})
+		.catch((err) => {
+			console.log(err);
+			res.status(500).json(err);
+		});
 });
 
-// get single post
-router.get('/:id', (req, res) => {
-    console.log('======================');
-    Films.findOne({
-            attributes: [
-                'id',
-                'title',
-                'overview',
-                'release_date',
-                'directed_by',
-                'poster_horizontal',
-                'background',
-                'release_date',
-                'logo'
-            ],
-            where: {
-                id: req.params.id
-            },
-            includes: [{
-                model: Phase,
-                attributes: ['phase_order'],
-            }, ],
-        })
-        .then((dbPostData) => {
-            const films = dbPostData.map((post) => post.get({ plain: true }));
+router.get('/films/:id', async (req, res) => {
+	try {
+		const dbFilmsData = await Films.findByPk(req.params.id);
 
-            res.render('movie-page', {
-                films,
-            });
-        })
-        .catch((err) => {
-            console.log(err);
-            res.status(500).json(err);
-        });
+		const films = dbFilmsData.get({ plain: true });
+
+		console.log(films);
+		res.render('movie-page', { films });
+	} catch (err) {
+		console.log(err);
+		res.status(500).json(err);
+	}
 });
 
 router.get('/login', (req, res) => {
-    if (req.session.loggedIn) {
-        res.redirect('/');
-        return;
-    }
+	if (req.session.loggedIn) {
+		res.redirect('/');
+		return;
+	}
 
-    res.render('login');
+	res.render('login', { layout: false });
 });
 
 module.exports = router;

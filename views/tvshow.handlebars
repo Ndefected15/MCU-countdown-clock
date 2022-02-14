@@ -1,0 +1,36 @@
+<body>
+
+
+		<div class='container'>
+			<div class='content-container'>
+				<div
+					class='featured-content'
+					style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('/images/Logo/Marvel_Cinematic_Universe_Logo.png');   background-repeat: no-repeat;   background-size: cover;   background-position: center;"
+				>
+				</div>
+				<div class='movie-list-container'>
+					<h1 class='movie-list-title'>Marvel Cinematic Universe TV Shows</h1>
+					<div class='movie-list-wrapper'>
+						<div class='movie-list'>
+
+                             {{#each tvshows as |tvshow|}}
+                             <div class='movie-list-item'>
+								<img
+									class='movie-list-item-img'
+									src="/images/{{tvshow.poster_horizontal}}"
+									alt='{{tvshow.title}}'
+									style='background: linear-gradient(rgb(48, 50, 62), rgb(30, 31, 42));'
+								/>
+								<a href="/tvshow-page/tvshow/{{tvshow.id}}" target="_blank">
+    							<button class='movie-list-item-button'>BOOKMARK</button>
+								</a>
+							</div>
+      
+                            {{/each}}
+							
+						</div>
+						<i class='fas fa-chevron-right arrow'></i>
+					</div>
+				</div>
+		</div>
+	</body>

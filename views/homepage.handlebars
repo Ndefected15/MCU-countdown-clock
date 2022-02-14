@@ -21,7 +21,9 @@
 									alt='{{film.title}}'
 									style='background: linear-gradient(rgb(48, 50, 62), rgb(30, 31, 42));'
 								/>
-								<button class='movie-list-item-button'>Watch</button>
+								<a href="/movie-page/films/{{film.id}}" target="_blank">
+    							<button class='movie-list-item-button'>WATCH</button>
+								</a>
 							</div>
       
                             {{/each}}
@@ -33,7 +35,7 @@
 
 
 					<div class='movie-list-container'>
-					<h1 class='movie-list-title'>Phase 2</h1>
+					<h1 class='movie-list-title'>Marvel Cinematic Universe Phase Two</h1>
 					<div class='movie-list-wrapper'>
 						<div class='movie-list'>
 
@@ -45,7 +47,7 @@
 									alt='{{film.title}}'
 									style='background: linear-gradient(rgb(48, 50, 62), rgb(30, 31, 42));'
 								/>
-								<a href="/movie-page" target="_blank">
+								<a href="/movie-page/films/{{film.id}}" target="_blank">
     							<button class='movie-list-item-button'>WATCH</button>
 								</a>
 							</div>
@@ -66,7 +68,7 @@
 					<button class='featured-button'>WATCH</button>
 				</div>
 				<div class='movie-list-container'>
-					<h1 class='movie-list-title'>Phase 3</h1>
+					<h1 class='movie-list-title'>Marvel Cinematic Universe Phase Three</h1>
 					<div class='movie-list-wrapper'>
 						<div class='movie-list'>
 
@@ -78,7 +80,9 @@
 									alt='{{film.title}}'
 									style='background: linear-gradient(rgb(48, 50, 62), rgb(30, 31, 42));'
 								/>
-								<button class='movie-list-item-button'>Watch</button>
+								<a href="/movie-page/films/{{film.id}}" target="_blank">
+    							<button class='movie-list-item-button'>WATCH</button>
+								</a>
 							</div>
       
                             {{/each}}
@@ -89,7 +93,7 @@
 				</div>
 
 				<div class='movie-list-container'>
-					<h1 class='movie-list-title'>Phase 2</h1>
+					<h1 class='movie-list-title'>Marvel Cinematic Universe Phase Four</h1>
 					<div class='movie-list-wrapper'>
 						<div class='movie-list'>
 
@@ -101,7 +105,9 @@
 									alt='{{film.title}}'
 									style='background: linear-gradient(rgb(48, 50, 62), rgb(30, 31, 42));'
 								/>
-								<button class='movie-list-item-button'>Watch</button>
+								<a href="/movie-page/films/{{film.id}}" target="_blank">
+    							<button class='movie-list-item-button'>WATCH</button>
+								</a>
 							</div>
       
                             {{/each}}
@@ -111,10 +117,7 @@
 					</div>
 				</div>
 			</div>
-		</div>	
-		<!-- COUNTDOWN -->
+		</div>
 		{{>countdown}}
 
-		<!-- CHAT BAR BLOCK -->
-		{{>chatbox}}
 	</body>

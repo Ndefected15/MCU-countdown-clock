@@ -3,8 +3,8 @@
 	<head>
 		<meta charset='UTF-8' />
 		<meta name='viewport' content='width=device-width' , initial-scale='1' />
-		<title>Disney Clone</title>
-		<link rel='stylesheet' href='./assets/css/upcoming.css' />
+		<title>Upcoming Titles</title>
+		<link rel='stylesheet' href='/css/upcoming2.css' />
 		<link
 			href='https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap'
 			rel='stylesheet'
@@ -21,6 +21,8 @@
 
 	<body>
 
+		{{>navbar}}
+
 		<div class='container'>
 			<input type='radio' name='slider' id='item-1' checked />
 			<input type='radio' name='slider' id='item-2' />
@@ -28,14 +30,11 @@
 			<div class='cards'>
 				<h1 class='card-intro'>Upcoming Movies/TV Shows</h1>
 				<label class='card' for='item-1' id='song-1'>
-					<img src='./assets/images/Posters/Moon_Knight.jpg' alt='song' />
+					<img src='/images/Posters/Moon_Knight.jpg' alt='song' />
 					<h1 class='card-title'>Moon Knight</h1>
 				</label>
 				<label class='card' for='item-2' id='song-2'>
-					<img
-						src='./assets/images/Posters/Doctor-Strange_MoM.jpg'
-						alt='song'
-					/>
+					<img src='/images/Posters/Doctor-Strange_MoM.jpg' alt='song' />
 					<h1 class='card-title'>Doctor Strange
 						<br />
 						in the
@@ -43,16 +42,14 @@
 						Multiverse of Madness</h1>
 				</label>
 				<label class='card' for='item-3' id='song-3'>
-					<img
-						src='./assets/images/Posters/Thor_Love_and_Thunder.jpg'
-						alt='song'
-					/>
+					<img src='/images/Posters/Thor_Love_and_Thunder.jpg' alt='song' />
 					<h1 class='card-title'>Thor: Love and Thunder</h1>
 				</label>
 			</div>
 		</div>
 
-		<script src='./assets/js/script.js'></script>
+		<script src='/js/script.js'></script>
+		<script src='/js/side.js'></script>
 
 	</body>
 
